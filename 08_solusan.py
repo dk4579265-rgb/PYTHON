@@ -1,19 +1,10 @@
-#########  PRIME NUMBER CHECKER  ###########
-  
-  
-number =17
-  
-is_prime =True
-  
-if number > 1:
-  for i in range(2 , number):
-      if (number % i)==0:
-          is_prime=False
-          break
-print("this is a prime number:",is_prime)  
-#print(is_prime)    
+########## function acceps any number of keyword argument print formed
+########## kwargs #####
 
+def print_kwargs(**kwargs):
+    for key,value in kwargs.items():
+        print(f"{key}:{value}")
 
-
-#output =this is a prime number: True
-#(17 is prime numbr)
+print_kwargs(name="saktiman",power="leser")
+print_kwargs(name="saktiman")
+print_kwargs(name="saktiman",power="lazer",enemy="Dr.jackaal")

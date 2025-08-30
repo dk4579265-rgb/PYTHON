@@ -1,22 +1,8 @@
-###multiplicaction table table####
+####### multiply two number but accept and multiple string ##
 
-number =3
+def multiply(p1 ,p2):
+    return p1 * p2
 
-for i in range(1 ,11):
-    if i==5:
-        continue
+print(multiply(2,3))            #  6
 
-    print(number, 'x' ,i ,'=',number * i)
-    
-    
-    
-    
-    ####OUTPUT=3 x 1 = 3
-3 x 2 = 6
-3 x 3 = 9
-3 x 4 = 12
-3 x 6 = 18
-3 x 7 = 21
-3 x 8 = 24
-3 x 9 = 27
-3 x 10 = 30
+print(multiply('a',7))         ## aaaaaaaa   #string multiply

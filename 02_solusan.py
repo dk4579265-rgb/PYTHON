@@ -1,9 +1,9 @@
-########### sum count even number ##########
-n = 10
-sum_even = 0
+######## FUNCTION WITH MULTIPAL PARAMITER  #####
 
-for i in range(1 , n+1):
-    if i%2 ==0:
-        sum_even +=1
+###### RETURN TWO NUMBER SUM #########
 
-print("Sum of even numbers is:", sum_even)
+def add(number1 , number2):
+    return number1 + number2
+
+
+print(add(5,7))                  #12

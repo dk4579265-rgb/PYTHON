@@ -1,9 +1,14 @@
-#####RIVERS STRING###############
+###########  CREAT A FUNCTION RETURN AREA CIRRCUMFENCE OF CIRCAL  ###
+import math
+def  circle_stats(redius):
+      area=math.pi* redius **2              # firmula area ka
+      circumference=2 * math.pi * redius
+      return area,circumference
 
-input_str="python"
-reversed_str=""
+a,c =circle_stats(3)
+  
+print("Area:",a, "circumference:",c)
 
-for char in input_str:
-    reversed_str= char +  reversed_str 
-    
-print(reversed_str)                    #nohtyp
+
+
+### output Area: 28.274333882308138 circumference: 18.84955592153876

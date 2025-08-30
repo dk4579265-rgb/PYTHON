@@ -1,14 +1,6 @@
-#FACTORIAL CALCULATER#################using will loop
-
-number =5
-factorial=1
+############ LEMDA FUNCTION  ###########
 
 
-while number >0:
-    factorial =factorial * number            #factorial *= number
-    number=number - 1                          #number -=1
-    
-print("Factorial  of number is:",factorial)     #Factorial  of number: 120
+cube =lambda x: x**3
 
-
-
+print(cube(4))           #64

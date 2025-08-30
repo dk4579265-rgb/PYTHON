@@ -1,19 +1,16 @@
-######### FIND NON RIPITED CURECTOR ########
-input_str="teetter"
+#########  USER KP GREET 
 
-for char in input_str:
-    print(char)
-if input_str.count(char) == 1:
-    print("char is:",char)
-    #break
-    
-    
+
+def greet(name):
+    return "Hello,"+ name +"!"
+
+print(greet("chai"))                        # hello chai
+
  
-#########output=t
-e
-e
-t
-t
-e
-r
-char is: r
+        OR
+
+def greet(name="user"):
+    return "hello,"+name+"!"
+
+
+print(greet())                          ## hello user !
