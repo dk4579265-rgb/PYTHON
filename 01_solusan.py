@@ -1,22 +1,9 @@
-#age=int(input("provide me an age: "))
+#################COUNT POSITIVE NUMBER ##############
+numbers=[1,-2,3,-4,5,6,-7,-8,9,10]
 
-#print(age)
-
-                        # output=provide me an age: """
-##############################
+positive_number_count=0
+for num in numbers:
+    if num>0:
+        positive_number_count +=1
+print("Final count of positive number is:",positive_number_count)        
     
-"""age=22
-if age<13:
-        print("child")                   
-elif age<20:
-    print("Teenager")
-elif age<10:
-       print("Adult")
-else:
-       print("diwakar is a 20 year old")"""
-
-
-#output=diwakar is a 20 year old
-###########################################
-
-
