@@ -1,8 +1,30 @@
-####### multiply two number but accept and multiple string ##
+########  INHERITENSE ######
+class Car:
+    def __init__(self,brand,model):
+        self.brand=brand
+        self.model=model
+        
+    def full_name(self):
+        return f"{self.brand}{self.model}"
+    
+    
+class ElectricalCar(Car):
+    def __init__(self,brand,model,battery_size):
+        super().__init__(brand,model)
+        self.battery_size=battery_size
+    
 
-def multiply(p1 ,p2):
-    return p1 * p2
-
-print(multiply(2,3))            #  6
-
-print(multiply('a',7))         ## aaaaaaaa   #string multiply
+my_tesla=ElectricalCar("Tesla","Model s","85kwh")
+print(my_tesla.model) 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+"""   
+my_car=Car("Toyota","Corolla")
+print(my_car.brand)                            
+print(my_car.model)  
+print(my_car.full_name()) """   

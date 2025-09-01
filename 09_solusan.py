@@ -1,15 +1,13 @@
-#######  GENRETER FUNCTION WITH YIELD  ######
-
-def even_generator(limit):
-    for i in range(2 , limit +1,2):
-        yield i
-   
-for num in even_generator(10):     
-  print(num)    
+class Car:
     
-#### output =
-2
-4
-6
-8
-10
+    def __init__(self, brand, model):
+        self.__brand = brand
+        self.model = model
+        
+        
+    @staticmethod
+    def general_description():
+         return "Car are means of transport"
+     @property
+     def model(self):
+         return self._model

@@ -1,14 +1,23 @@
-###########  CREAT A FUNCTION RETURN AREA CIRRCUMFENCE OF CIRCAL  ###
-import math
-def  circle_stats(redius):
-      area=math.pi* redius **2              # firmula area ka
-      circumference=2 * math.pi * redius
-      return area,circumference
+####### INCEPSULASTION  ##########
 
-a,c =circle_stats(3)
-  
-print("Area:",a, "circumference:",c)
+class Car:
+    def __init__(self,brand,model):
+        self.__brand=brand
+        self.model=model
+        
+    def chai_brand(self):
+     return self.__brand +"!"   
+        
+    def full_name(self):
+        return f"{self.__brand}{self.model}"
+    
+    
+class ElectricalCar(Car):
+    def __init__(self,brand,model,battery_size):
+        super().__init__(brand,model)
+        self.battery_size=battery_size
+    
 
-
-
-### output Area: 28.274333882308138 circumference: 18.84955592153876
+my_tesla=ElectricalCar("Tesla","Model s","85kwh")
+#print(my_tesla.__brand) 
+print(my_tesla.chai_brand())

@@ -1,24 +1,18 @@
-####### FUNCTION TASK VARIABLE NO ARGUMENT AND RETURN THERE SUM#
-
-def sum_all(*args):              # * lagana hai =multiple
-    return sum(args)
+#########  STATIC METHOD ##########
 
 
-
-print(sum_all(1,2,))
-print(sum_all(1,2,3,4))
-print(sum_all(1,2,3,4,5,6))
-
-
-
+class Car:
+    
+    def __init__(self, brand, model):
+        self.__brand = brand
+        self.model = model
 
 
+    @staticmethod
+    def general_description():
+         return "Car are means of transport"
+     
 
 
-
-
-
-## output =
-3
-10
-21
+Car("Tata","Nrxon")
+print(Car.general_description())           # Car are means of transport
