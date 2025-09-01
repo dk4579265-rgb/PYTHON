@@ -1,15 +1,17 @@
-##########  BASIC  CLASS OBJECT ###########
-class Car:
-    def __init__(self,brand,model):
-        self.brand=brand
-        self.model=model
-        
+## TIMING FUNCTION EXECUTION ####### 
+import time
+
+def timer(func):
+    def wrapper(*args,**kwargs):
+        start=time.time()
+        result=func(*args,**kwargs)
+        end=time.time()
+        print(f"{func.__name__} ran in {end-start}time")
+        return result
+    return wrapper
+
+@timer                                ## timer se hoke hi gujre ga
+def example_function(n):
+    time.sleep(n)
     
-my_car=Car("Toyota","Corolla")
-print(my_car.brand)                            #Toyota
-print(my_car.model)                            #corolla
-
-
-my_new_car=Car("Tata","safari")
-print(my_new_car.model)                         #Tata
-print(my_new_car.brand)                           #safari
+example_function(2)  

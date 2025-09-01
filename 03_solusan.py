@@ -1,30 +1,28 @@
-########  INHERITENSE ######
-class Car:
-    def __init__(self,brand,model):
-        self.brand=brand
-        self.model=model
-        
-    def full_name(self):
-        return f"{self.brand}{self.model}"
-    
-    
-class ElectricalCar(Car):
-    def __init__(self,brand,model,battery_size):
-        super().__init__(brand,model)
-        self.battery_size=battery_size
-    
+import time
 
-my_tesla=ElectricalCar("Tesla","Model s","85kwh")
-print(my_tesla.model) 
- 
- 
- 
- 
- 
- 
- 
-"""   
-my_car=Car("Toyota","Corolla")
-print(my_car.brand)                            
-print(my_car.model)  
-print(my_car.full_name()) """   
+def cache(func):
+    cache_value={}
+    print(cache_value)
+    def wrapper(*args):
+        if args in cache_value:
+            return cache_value[args]
+        result=func(*args)
+        cache_value[args]=result
+        return result
+    return wrapper
+
+@cache
+def long_running_function(a,b):
+    time.sleep(4)
+    return a+b
+
+print(long_running_function(2,3))
+print(long_running_function(2,3))
+print(long_running_function(4,3))
+
+
+###### output =
+{}
+5
+5
+7
